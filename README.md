@@ -1,1 +1,1 @@
-# Generating reviews from Amazon review data using Variational Autoencoder
+# Generating text from Amazon review data using Variational Autoencoder
