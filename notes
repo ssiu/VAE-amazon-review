@@ -1,0 +1,32 @@
+'''
+To Do
+'''
+
+'as' changes to 'a'
+diverse beam search
+adaptive softmax
+
+
+
+'''
+Model Inputs
+'''
+
+LSTM
+@param input (seq_len, batch, input_size)
+@param h_0 (1, batch, hidden_size)
+@param c_0 (1, batch, hidden_size)
+@returns output (seq_len, batch, hidden_size)
+@returns h_n (1, batch, hidden_size)
+@returns c_n (1, batch, hidden_size)
+
+LSTMCell
+@param input (batch, input_size)
+@param h_0 (batch, hidden_size)
+@param c_0 (batch, hidden_size)
+@returns h_1 (batch, hidden_size)
+@returns c_1 (batch, hidden_size)
+
+CrossEntropyLoss
+@param (batch, classes)
+@returns (batch)
