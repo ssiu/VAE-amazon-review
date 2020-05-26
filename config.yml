@@ -1,0 +1,39 @@
+build_vocab:
+  load_path: ./files/Fashion/clean_review_5.json
+  max_seq_len: 200
+  max_vocab: 50000
+  min_word_freq: 20
+  save_path_data: ./files/Fashion/train_review_5.json
+  save_path_vocab: ./files/Fashion/vocab.json
+  save_path_vocab_dist: ./files/Fashion/vocab_dist.json
+clean_dataset:
+  load_path: ./files/Fashion/review_5.json
+  save_path_data: ./files/Fashion/clean_review_5.json
+  save_path_seq_len: ./files/Fashion/seq_len_5.json
+load_model:
+  load_path: null
+  save_path: null
+split_dataset:
+  load_path: ./datasets/Amazon_Fashion.json.gz
+  save_path_data: ./files/Fashion/review_
+  save_path_scores: ./files/Fashion/scores.json
+train_model:
+  load_path_data: ./files/Fashion/train_review_5.json
+  load_path_vocab: ./files/Fashion/vocab.json
+  max_epoch: 10
+  model:
+    a: 0.9
+    b: 5
+    batch_size: 16
+    dim_embedding: 128
+    dim_hidden: 32
+    dim_latent: 32
+    dropout_prob: 0.5
+    keep_rate: 0.5
+  save_path: ./files/Fashion/vae.pt
+  start_epoch: 9
+detect_anomaly:
+  load_path_data: ./files/Fashion/train_review_5.json
+  load_path_model: ./files/Fashion/vae.pt
+  save_path: ./files/Fashion/anomaly.json
+  sample_size: 10
