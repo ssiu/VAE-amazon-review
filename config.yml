@@ -1,3 +1,4 @@
+#https://stackoverflow.com/questions/8127686/parsing-a-yaml-file-in-python-and-accessing-the-data
 build_vocab:
   load_path: ./files/Fashion/clean_review_5.json
   max_seq_len: 200
